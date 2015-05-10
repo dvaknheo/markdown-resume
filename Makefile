@@ -28,3 +28,9 @@ clean:
 
 $(LATEX_TEMPLATE):
 	git submodule update --init
+
+read: $(PDFS)
+	evince $< &
+
+read-html: $(HTML)
+	chromium-browser $< &
